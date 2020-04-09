@@ -1,0 +1,34 @@
+language: cpp
+
+before_install:
+ - sudo apt-get -qq update
+ - sudo apt-get install -y lcov cmake
+# Install googletest
+ - sudo wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
+ - sudo tar xf release-1.8.1.tar.gz
+ - cd googletest-release-1.8.1
+ - sudo cmake .
+ - sudo make
+ - sudo make install
+# - sudo cp -a include/gtest /usr/include
+# - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+# Back to the build library
+ - cd "${TRAVIS_BUILD_DIR}"
+
+script:
+# Make project
+ - cmake .
+ - make ut_factory_injector
+# Run unit tests for coverage
+ - bin/ut_factory_injector
+
+after_success:
+# Capture coverage info
+ - lcov --directory . --capture --output-file coverage.info
+# Filter out system and extra files
+ - lcov --remove coverage.info '/usr/*' '*/tests/*' "${HOME}"'/.cache/*' --output-file coverage.info
+ # Output coverage data for debugging
+ - lcov --list coverage.info
+ # Uploading to CodeCov
+ # '-f' specifies file(s) to use and disables manual coverage gathering and file search which has already been done above
+ - bash <(curl -s https://codecov.io/bash) -f coverage.info
