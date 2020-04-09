@@ -1,6 +1,7 @@
 # C++ Factories injector
 [![Build Status](https://travis-ci.com/ebellocchia/factories_injector.svg?branch=master)](https://travis-ci.com/ebellocchia/factories_injector)
 [![codecov](https://codecov.io/gh/ebellocchia/factories_injector/branch/master/graph/badge.svg)](https://codecov.io/gh/ebellocchia/factories_injector)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Introduction
 
