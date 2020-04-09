@@ -18,7 +18,7 @@ before_install:
 script:
 # Make project
  - cmake .
- - make ut_factory_injector
+ - make
 # Run unit tests for coverage
  - bin/ut_factory_injector
 
