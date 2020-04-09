@@ -44,8 +44,8 @@ target_include_directories (factory_injector_example PRIVATE ${PROJECT_SOURCE_DI
 
 # Source files
 add_executable (ut_factory_injector
-                ./test/ut_main.cpp
-                ./test/ut_factory_injector.cpp)
+                ./tests/ut_main.cpp
+                ./tests/ut_factory_injector.cpp)
 # Set include directories
 target_include_directories (ut_factory_injector PRIVATE ${PROJECT_SOURCE_DIR}/test)
 # Set compiler options
