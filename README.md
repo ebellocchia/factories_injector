@@ -5,7 +5,7 @@
 This is a template-based utility library composed of just a couple of header files, hence it doesn't need to be compiled and linked.\
 It allows run-time injection of factories, making the code completely independent from specific factory types and only dependent on factory interfaces.\
 In this way, you can use a real factory producing real objects in the production code, while in the testing code you can dynamically inject a factory producing test objects (e.g. stubs or mocks) without modifying a single line.\
-For being injected by the library, the factories shall follow the [https://en.wikipedia.org/wiki/Abstract_factory_pattern](abstract factory pattern) and inherit from the *FactoryTraits* structure defined by the library.
+For being injected by the library, the factories shall follow the [abstract factory pattern](https://en.wikipedia.org/wiki/Abstract_factory_pattern) and inherit from the *FactoryTraits* structure defined by the library.
 
 ## Installation
 
