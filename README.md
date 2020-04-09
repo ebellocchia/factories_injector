@@ -1,11 +1,13 @@
-# Introduction
+# C++ Factories injector
+
+## Introduction
 
 This is a template-based utility library composed of just a couple of header files, hence it doesn't need to be compiled and linked.\
 It allows run-time injection of factories, making the code completely independent from specific factory types and only dependent on factory interfaces.\
 In this way, you can use a real factory producing real objects in the production code, while in the testing code you can dynamically inject a factory producing test objects (e.g. stubs or mocks) without modifying a single line.\
 For being injected by the library, the factories shall follow the [https://en.wikipedia.org/wiki/Abstract_factory_pattern](abstract factory pattern) and inherit from the *FactoryTraits* structure defined by the library.
 
-# Installation
+## Installation
 
 As already said, you just have to include the header files. There is no dependency and nothing to compile, since the entire code is based on templates.\
 The code is compliant to C++14 standard, so you need a compiler supporting C++14.\
@@ -20,7 +22,7 @@ A *bin* folder will be created inside with the compiled files.
 
 **NOTE:** for compiling unit tests, you need *googletest* to be installed.
 
-# Usage
+## Usage
 
 To inject a factory, you have to create a factory interface (*abstract factory*) that inherits from the *FactoryTraits* structure, by specifying its type and the interface of the object to be created.
 
@@ -141,13 +143,13 @@ In case you try to get a factory type that is not registered, a *FactoryNotRegis
 
 Of course, you can register as many factory types as you want, as long as they inherit from a different interface.
 
-# How it works
+## How it works
 
 The base concept is quite simple. The *FactoryInjector* class is keeping track of the registered types by means of a hash table.\
 Using the *FactoryTraits*, the class deducts the interface type of the concrete factory. Then, it creates an instance of the concrete factory and inserts it in the hash table, associating it with the *typeid* of the abstract factory. Therefore, if you register another concrete factory inheriting from the same abstract factory, it will overwrite the existent one because the *typeid* of the abstract factory is always the same and it is used as a key of the hash table.\
 When you get a factory, a reference to the concrete instance is simply returned by searching for the *typeid* of the abstract factory in the hash table.\
 The library takes advantage of smart pointers, move semantics, perfect forwarding and variadic templates to be as most generic as possible.
 
-# License
+## License
 
 This software is available under the MIT license.
