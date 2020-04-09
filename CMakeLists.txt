@@ -36,7 +36,7 @@ add_executable (factory_injector_example
 # Set include directories
 target_include_directories (factory_injector_example PRIVATE ${PROJECT_SOURCE_DIR}/example)
 # Set compiler options
-#target_compile_options (factory_injector_example PRIVATE -std=c++14)
+target_compile_options (factory_injector_example PRIVATE -std=c++14)
 
 #
 # Unit tests
@@ -49,6 +49,6 @@ add_executable (ut_factory_injector
 # Set include directories
 target_include_directories (ut_factory_injector PRIVATE ${PROJECT_SOURCE_DIR}/test)
 # Set compiler options
-target_compile_options (ut_factory_injector PRIVATE -O0 -std=c++14)
+target_compile_options (ut_factory_injector PRIVATE -O0 -std=c++14 -ftest-coverage -fprofile-arcs)
 # Set link libraries
-target_link_libraries (ut_factory_injector gtest pthread)
+target_link_libraries (ut_factory_injector gtest pthread gcov --coverage)
