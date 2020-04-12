@@ -36,7 +36,7 @@
 #include <memory>
 #include <unordered_map>
 #include <typeindex>
-// Common
+// Project
 #include "factory_traits.hpp"
 #include "not_copyable_movable.hpp"
 
@@ -145,7 +145,7 @@ class FactoryAlreadyRegisteredEx : public std::runtime_error
          * @param[in] rcFactoryName Factory name
          */
         FactoryAlreadyRegisteredEx(const std::string& rcFactoryName) :
-            std::runtime_error("The requested factory " + rcFactoryName + " is already existent")
+            std::runtime_error("The requested factory " + rcFactoryName + " is already registered")
         {}
 };
 
