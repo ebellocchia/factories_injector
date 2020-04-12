@@ -151,7 +151,7 @@ Of course, you can register as many factory types as you want, as long as they i
 The base concept is quite simple. The *FactoryInjector* class is keeping track of the registered types by means of a hash table.\
 Using the *FactoryTraits*, the class deducts the interface type of the concrete factory. Then, it creates an instance of the concrete factory and inserts it in the hash table, associating it with the *typeid* of the abstract factory. Therefore, if you register another concrete factory inheriting from the same abstract factory, it will overwrite the existent one because the *typeid* of the abstract factory is always the same and it is used as a key of the hash table.\
 When you get a factory, a reference to the concrete instance is simply returned by searching for the *typeid* of the abstract factory in the hash table.\
-The library takes advantage of smart pointers, move semantics, perfect forwarding and variadic templates to be as most generic as possible.
+The library takes advantage of move semantics, perfect forwarding and variadic templates to be as most generic as possible.
 
 ## License
 
