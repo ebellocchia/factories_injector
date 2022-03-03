@@ -13,7 +13,7 @@ For being injected by the library, the factories shall follow the [abstract fact
 ## Installation
 
 As already said, you just have to include the header files. There is no dependency and nothing to compile, since the entire code is based on templates.\
-The code is compliant to C++14 standard, so you need a compiler supporting C++14.\
+The code is compliant to C++14 standard, so you need a compiler supporting C++14.
 
 To compile the example and the unit tests, just run:
 
