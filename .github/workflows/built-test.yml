@@ -1,0 +1,25 @@
+# This workflow will install dependencies, build the project and run tests
+
+name: Build & Test
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install cmake and gtest
+      run: |
+        apt-get install -y cmake libgtest-dev
+    - name: Build project
+      run: |
+        cmake .
+        make
+    - name: Run tests
+      run: |
+        bin/ut_factory_injector
