@@ -4,7 +4,7 @@
 |---|
 | [![GitHub License](https://img.shields.io/github/license/ebellocchia/factories_injector?label=License)](https://github.com/ebellocchia/factories_injector?tab=MIT-1-ov-file) |
 | [![Build & Test](https://github.com/ebellocchia/factories_injector/actions/workflows/built-test.yml/badge.svg)](https://github.com/ebellocchia/factories_injector/actions/workflows/built-test.yml) |
-| [![Codacy grade](https://img.shields.io/codacy/grade/a9ba229090be499fb27380aabcbc635b?label=Codacy%20Grade)](https://app.codacy.com/gh/ebellocchia/factories_injector/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/ebellocchia/factories_injector?label=CodeFactor%20Grade)](https://www.codefactor.io/repository/github/ebellocchia/factories_injector) |
+| [![Codecov](https://img.shields.io/codecov/c/github/ebellocchia/factories_injector?label=Code%20Coverage)](https://codecov.io/gh/ebellocchia/factories_injector) [![Codacy grade](https://img.shields.io/codacy/grade/a9ba229090be499fb27380aabcbc635b?label=Codacy%20Grade)](https://app.codacy.com/gh/ebellocchia/factories_injector/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/ebellocchia/factories_injector?label=CodeFactor%20Grade)](https://www.codefactor.io/repository/github/ebellocchia/factories_injector) |
 | |
 
 ## Introduction
